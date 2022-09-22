@@ -164,7 +164,7 @@ for row in b:
     for number in row:
         if(number % 2 != 0):
             odds_in_b.append(number)
-
+# flatten() return a copy of the array collapsed into one dimension.
 odds_in_b = b_arr.flatten()[b_arr.flatten() % 2 == 1]
 #or
 b_arr_list = b_arr.flatten()
@@ -267,21 +267,47 @@ d = [
 ]
 
 # Exercise 1 - Find the sine of all the numbers in d
+sin_d = np.sin(d)
+sin_d
 
 # Exercise 2 - Find the cosine of all the numbers in d
+cos_d = np.cos(d)
+cos_d
 
 # Exercise 3 - Find the tangent of all the numbers in d
+tan_d = np.tan(d)
+tan_d
 
 # Exercise 4 - Find all the negative numbers in d
+#solved with python list
+neg_d = []
+for x in d:
+    for y in x:
+        if y < 0:
+            neg_d.append(y)
+neg_d
+
+# with numpy
+np.shape(d)
+neg_d1 = d[d < 0]
+neg_d1
 
 # Exercise 5 - Find all the positive numbers in d
+np.shape(d)
+neg_d1 = d[d > 0]
+neg_d1
 
 # Exercise 6 - Return an array of only the unique numbers in d.
+np.unique(d)
 
 # Exercise 7 - Determine how many unique numbers there are in d.
+np.unique(d).size
 
 # Exercise 8 - Print out the shape of d.
+np.shape(d)
 
 # Exercise 9 - Transpose and then print out the shape of d.
+np.shape(np.transpose(d))
 
 # Exercise 10 - Reshape d into an array of 9 x 2
+np.reshape(d, (9, 2))
